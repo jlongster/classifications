@@ -118,5 +118,45 @@
       "needs_action": "no",
       "urgency": "urgency_3"
     }
+  },
+  {
+    "name": "content-first company health newsletter",
+    "state": "From: GoodRx Editorial <editorial@contact.goodrx.test>\nTo: Recipient <me@example.test>\nSubject: 12 High-Fiber Foods That Support Weight Loss\nBody: An educational article explaining nutrition research, food examples, and practical guidance.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "newsletters",
+      "needs_action": "no",
+      "urgency": "urgency_3"
+    }
+  },
+  {
+    "name": "legitimate retail discount is potential spam",
+    "state": "From: Rug Store <offers@known-retailer.test>\nTo: Recipient <me@example.test>\nSubject: Buy one, get one 50% off\nBody: Shop our seasonal sale from an identifiable retailer.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "potential_spam",
+      "needs_action": "no",
+      "urgency": "urgency_3"
+    }
+  },
+  {
+    "name": "random-domain fabricated casino reward is spam",
+    "state": "From: Casino Rewards <random@unrelated-domain.test>\nTo: Recipient <me@example.test>\nSubject: Your account bonus is active\nBody: A fabricated member account has 200 free spins. Deposit now or lose them forever.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "spam",
+      "needs_action": "no",
+      "urgency": "urgency_3"
+    }
+  },
+  {
+    "name": "miracle cure bait is spam",
+    "state": "From: Health Secret <random@unrelated-domain.test>\nTo: Recipient <me@example.test>\nSubject: Reverse dementia naturally in days\nBody: Thousands cured memory loss with one secret recipe. Click to reveal it.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "spam",
+      "needs_action": "no",
+      "urgency": "urgency_3"
+    }
   }
 ]

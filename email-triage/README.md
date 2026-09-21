@@ -11,7 +11,8 @@ Classifies email by direct-to-recipient status, category, action requirement, an
 - Keep **Personal** mail in Inbox; archive other categories under their labels.
 - Add `! Action` only when the category is **Personal** or **Work** and action is required. Never apply it to another category.
 - Add exactly one urgency label to every email: `Urgency: 1` is highest and `Urgency: 3` is lowest. Spam and Potential Spam are always `Urgency: 3`.
-- Move clear scams or phishing to Spam; label questionable bulk mail **Potential Spam**.
+- Treat recurring content-first editorial publications as **Newsletters**, even when published by a company; promotion-first mail is **Potential Spam**.
+- Move clearly deceptive mail—phishing, fabricated rewards, random-domain casino offers, fake dating, adult bait, and miracle cures—to **Spam**. Reserve **Potential Spam** for legitimate or plausibly legitimate unwanted bulk mail.
 - Never add or remove stars.
 
 ## Classification source of truth
