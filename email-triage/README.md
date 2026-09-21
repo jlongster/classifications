@@ -14,7 +14,7 @@ Classifies email by direct-to-recipient status, category, action requirement, an
 - Add `Action` only when the category is **Personal** or **Work** and action is required. Never apply it to another category.
 - Add exactly one urgency label to every email: `Urgency/1` is highest and `Urgency/3` is lowest. Spam and Potential Spam are always `Urgency/3`.
 - Use **Newsletters** only for recurring author-led letters or essays clearly written by an identifiable person in a personal, conversational voice. Company-branded publications and corporate editorial content are **Potential Spam**.
-- Move clearly deceptive mail—phishing, fabricated rewards, random-domain casino offers, fake dating, adult bait, and miracle cures—to **Spam**. Reserve **Potential Spam** for legitimate or plausibly legitimate unwanted bulk mail.
+- Move clearly deceptive mail—phishing, fabricated rewards, random-domain casino offers, fake dating, adult bait, and miracle cures—to **Spam**. Reserve **Potential Spam** for legitimate or plausibly legitimate unwanted bulk, promotional, recommendation, and re-engagement mail. Classify each message by purpose because one service may send both useful Personal alerts and promotional fluff.
 - Mark a message read by removing Gmail’s `UNREAD` label only when it is not in Inbox, does not have `Action`, and is not `Urgency/1`. Otherwise preserve its read state.
 - Never add or remove stars.
 

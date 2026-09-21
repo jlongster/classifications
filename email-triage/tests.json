@@ -208,5 +208,45 @@
       "needs_action": "no",
       "urgency": "urgency_3"
     }
+  },
+  {
+    "name": "generic linkedin invitation summary",
+    "state": "From: LinkedIn <notifications-noreply@linkedin.test>\nTo: Recipient <me@example.test>\nSubject: You have 3 new invitations\nBody: See who reached out. Review your pending invitations and grow your network.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "potential_spam",
+      "needs_action": "no",
+      "urgency": "urgency_3"
+    }
+  },
+  {
+    "name": "person-specific professional invitation relayed by platform",
+    "state": "From: Alex Person <invitations@linkedin.test>\nTo: Recipient <me@example.test>\nSubject: I want to connect\nBody: Alex, a software engineer in your industry, says: I would like to join your professional network.",
+    "expected": {
+      "direct_to_you": "yes",
+      "category": "work",
+      "needs_action": "no",
+      "urgency": "urgency_3"
+    }
+  },
+  {
+    "name": "commercial browsing recommendation is potential spam",
+    "state": "From: Home Search <listings@commercial-service.test>\nTo: Recipient <me@example.test>\nSubject: An update on a home, and another recommendation\nBody: Similar to other homes you viewed. Browse these recommended properties selected to bring you back to the service.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "potential_spam",
+      "needs_action": "no",
+      "urgency": "urgency_3"
+    }
+  },
+  {
+    "name": "specific requested listing alert is personal",
+    "state": "From: Home Search <alerts@commercial-service.test>\nTo: Recipient <me@example.test>\nSubject: Price changed on your saved home\nBody: A home you explicitly saved has changed price from $500,000 to $475,000.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "personal",
+      "needs_action": "no",
+      "urgency": "urgency_3"
+    }
   }
 ]
