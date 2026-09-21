@@ -114,7 +114,7 @@
     "state": "From: Your Local Neighbors <no-reply@is.email.nextdoor.test>\nTo: Recipient <me@example.test>\nSubject: A controversial neighborhood post\nList-ID: \nBody: See trending posts from people in your neighborhood.",
     "expected": {
       "direct_to_you": "no",
-      "category": "subscriptions",
+      "category": "potential_spam",
       "needs_action": "no",
       "urgency": "urgency_3"
     }
@@ -245,6 +245,16 @@
     "expected": {
       "direct_to_you": "no",
       "category": "personal",
+      "needs_action": "no",
+      "urgency": "urgency_3"
+    }
+  },
+  {
+    "name": "nextdoor neighborhood content is always potential spam",
+    "state": "From: Your Neighborhood <no-reply@is.email.nextdoor.test>\nTo: Recipient <me@example.test>\nSubject: A neighborhood post is trending\nBody: See what neighbors are discussing today and return to Nextdoor to read more.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "potential_spam",
       "needs_action": "no",
       "urgency": "urgency_3"
     }
