@@ -1,6 +1,6 @@
 {
   "model": "jev-1.13.0",
-  "state_template": "From: {{from}}\nTo: {{to}}\nSubject: {{subject}}\nReceived: {{received_at}}\nBody: {{clean_body_or_snippet}}",
+  "state_template": "From: {{from}}\nTo: {{to}}\nSubject: {{subject}}\nReceived: {{received_at}}\nList-ID: {{list_id_or_empty}}\nList-Unsubscribe: {{list_unsubscribe_or_empty}}\nEntity candidates: {{entity_candidates_or_empty}}\nBody: {{clean_body_or_snippet}}",
   "questions": {
     "human_direct": {
       "type": "choice",
@@ -39,6 +39,43 @@
         "urgency_2": "Medium: deserves attention within several days.",
         "urgency_3": "Lowest: no immediate time pressure; can wait or is merely informational."
       }
+    },
+    "entity": {
+      "type": "choice",
+      "instructions": "Only when category is email_lists or newsletters, choose the candidate that identifies the recurring list or editorial publication itself. Choose none when no candidate is reliable. Never infer an entity for another category.",
+      "criteria_template": {
+        "{{candidate}}": "This candidate is the stable name of the email list or editorial publication.",
+        "none": "No candidate reliably identifies the recurring list or publication."
+      }
+    }
+  },
+  "preprocessing": {
+    "entity_candidates": {
+      "apply_when": "Always generate candidates before Jev evaluation; use them only when category is email_lists or newsletters.",
+      "sources_in_priority_order": [
+        "List-ID header name or host",
+        "mailing-list address local-part",
+        "stable bracketed list prefix in subject",
+        "sender display name",
+        "sender domain or publication domain"
+      ],
+      "normalization": "Strip generic words such as list, newsletter, digest, mail, notifications, noreply, and team; remove punctuation; lowercase; collapse whitespace and hyphens; reject generic or empty results.",
+      "maximum_candidates": 5
+    }
+  },
+  "postprocessing": {
+    "entity": {
+      "apply_only_to_categories": [
+        "email_lists",
+        "newsletters"
+      ],
+      "minimum_choice_probability": 0.7,
+      "on_failure": "Do not create a child label; use only the parent category label.",
+      "slug": "lowercase ASCII when practical; trim; replace runs of non-alphanumeric characters with one hyphen; remove leading/trailing hyphens; maximum 60 characters"
+    },
+    "gmail_label": {
+      "email_lists": "Email Lists/{{entity_slug}}",
+      "newsletters": "Newsletters/{{entity_slug}}"
     }
   }
 }

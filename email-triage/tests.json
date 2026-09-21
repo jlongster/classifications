@@ -6,7 +6,8 @@
       "human_direct": "yes",
       "category": "personal",
       "needs_action": "yes",
-      "urgency": "urgency_1"
+      "urgency": "urgency_1",
+      "entity": null
     }
   },
   {
@@ -16,7 +17,8 @@
       "human_direct": "yes",
       "category": "work",
       "needs_action": "yes",
-      "urgency": "urgency_2"
+      "urgency": "urgency_2",
+      "entity": null
     }
   },
   {
@@ -26,7 +28,8 @@
       "human_direct": "no",
       "category": "personal",
       "needs_action": "no",
-      "urgency": "urgency_3"
+      "urgency": "urgency_3",
+      "entity": null
     }
   },
   {
@@ -36,7 +39,8 @@
       "human_direct": "no",
       "category": "github",
       "needs_action": "no",
-      "urgency": "urgency_3"
+      "urgency": "urgency_3",
+      "entity": null
     }
   },
   {
@@ -46,7 +50,9 @@
       "human_direct": "no",
       "category": "newsletters",
       "needs_action": "no",
-      "urgency": "urgency_3"
+      "urgency": "urgency_3",
+      "entity": "weekly-journal",
+      "gmail_label": "Newsletters/weekly-journal"
     }
   },
   {
@@ -56,7 +62,8 @@
       "human_direct": "no",
       "category": "potential_spam",
       "needs_action": "no",
-      "urgency": "urgency_3"
+      "urgency": "urgency_3",
+      "entity": null
     }
   },
   {
@@ -66,7 +73,20 @@
       "human_direct": "no",
       "category": "personal",
       "needs_action": "no",
-      "urgency": "urgency_1"
+      "urgency": "urgency_1",
+      "entity": null
+    }
+  },
+  {
+    "name": "named discussion list",
+    "state": "From: Gambit List <gambit-list@example.test>\nTo: Recipient <me@example.test>\nSubject: [gambit] Tail-call optimization discussion\nList-ID: Gambit <gambit.example.test>\nBody: A member continues a technical discussion with the list.",
+    "expected": {
+      "human_direct": "no",
+      "category": "email_lists",
+      "needs_action": "no",
+      "urgency": "urgency_3",
+      "entity": "gambit",
+      "gmail_label": "Email Lists/gambit"
     }
   }
 ]
