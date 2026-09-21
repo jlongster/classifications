@@ -114,7 +114,7 @@
     "state": "From: Your Local Neighbors <no-reply@is.email.nextdoor.test>\nTo: Recipient <me@example.test>\nSubject: A controversial neighborhood post\nList-ID: \nBody: See trending posts from people in your neighborhood.",
     "expected": {
       "direct_to_you": "no",
-      "category": "potential_spam",
+      "category": "subscriptions",
       "needs_action": "no",
       "urgency": "urgency_3"
     }
@@ -175,6 +175,16 @@
     "expected": {
       "direct_to_you": "no",
       "category": "personal",
+      "needs_action": "no",
+      "urgency": "urgency_3"
+    }
+  },
+  {
+    "name": "reddit account digest",
+    "state": "From: Reddit <noreply@redditmail.test>\nTo: Recipient <me@example.test>\nSubject: Posts you may have missed\nBody: A recurring personalized roundup of posts from communities followed by the recipient.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "subscriptions",
       "needs_action": "no",
       "urgency": "urgency_3"
     }

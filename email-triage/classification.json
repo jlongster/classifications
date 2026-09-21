@@ -20,7 +20,8 @@
         "github": "Notifications delivered by GitHub about repositories, issues, pull requests, commits, reviews, or discussions.",
         "email_lists": "A genuine discussion mailing list where members converse, supported by an explicit List-ID header or a known mailing-list sender or recipient address. Excludes Nextdoor, LinkedIn, Facebook, forum digests, social-network updates, and ordinary notification emails.",
         "newsletters": "Recurring, content-first editorial publications primarily intended to be read, including reported, educational, or curated articles. A company may publish one if the message is genuinely editorial. Excludes discounts, sales campaigns, product updates, product announcements, and other promotion-first mail.",
-        "potential_spam": "Legitimate or plausibly legitimate but unwanted bulk acquisition or promotion: unsolicited marketing, discounts, product updates, cold sales, recruiting blasts, social-network digests, trending-post notifications, and unclear bulk outreach. Do not use for informational notices or event reminders from an existing personal membership or service unless the message is primarily promotional.",
+        "subscriptions": "Recurring account-based digests, recommendations, activity summaries, and content roundups from social networks, community platforms, forums, or feed-driven services. Examples include Reddit digests, Nextdoor neighborhood summaries, and similar platform-generated content. Excludes direct personal messages, genuine discussion mailing lists, editorial publications, and promotion-first marketing.",
+        "potential_spam": "Legitimate or plausibly legitimate but unwanted bulk acquisition or promotion: unsolicited marketing, discounts, product updates, cold sales, recruiting blasts, unclear bulk outreach. Do not use for informational notices or event reminders from an existing personal membership or service unless the message is primarily promotional.",
         "spam": "Clearly deceptive, fraudulent, malicious, or worthless junk. Includes phishing, fake invoices, fabricated accounts or rewards, random-domain casino offers, fake dating messages, adult bait, miracle-cure claims, impersonation, and similar scam patterns."
       }
     },
@@ -29,7 +30,7 @@
       "instructions": "Only email categorized as personal or work can require action. For every other category, choose no. For personal or work, decide whether the recipient has a legitimate reason or obligation to act; ignore actions serving only the sender’s marketing, sales, or fraudulent goal.",
       "criteria": {
         "yes": "The category is personal or work, and a reply is genuinely expected or the recipient must decide, pay, schedule, provide information, review assigned work, meet a deadline, or resolve a legitimate account or security issue.",
-        "no": "The category is not personal or work, or the message is informational or optional. Includes advertisements, promotions, discounts, newsletters, product announcements, GitHub notifications, email lists, scams, phishing, unsubscribe links, and generic calls to click, buy, register, deposit, claim, or learn more."
+        "no": "The category is not personal or work, or the message is informational or optional. Includes advertisements, promotions, discounts, newsletters, subscriptions, product announcements, GitHub notifications, email lists, scams, phishing, unsubscribe links, and generic calls to click, buy, register, deposit, claim, or learn more."
       }
     },
     "urgency": {

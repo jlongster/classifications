@@ -10,6 +10,7 @@ Classifies email by direct-to-recipient status, category, action requirement, an
 - Enforce that mail written directly to the recipient is always **Personal** or **Work**; automated mail may use any category.
 - Use **Email Lists** only when List-ID or a known list address proves it is a real discussion list; social-network digests are not lists. For Email Lists, deterministically extract an entity and create a nested label such as `Email Lists/gambit`. All newsletters use the single top-level `Newsletters` label; never create newsletter sublabels.
 - Keep **Personal** mail in Inbox; archive other categories under their labels.
+- Use **Subscriptions** for recurring platform-generated digests, recommendations, and activity summaries from services such as Reddit or Nextdoor.
 - Add `Action` only when the category is **Personal** or **Work** and action is required. Never apply it to another category.
 - Add exactly one urgency label to every email: `Urgency/1` is highest and `Urgency/3` is lowest. Spam and Potential Spam are always `Urgency/3`.
 - Treat recurring content-first editorial publications as **Newsletters**, even when published by a company; promotion-first mail is **Potential Spam**.
