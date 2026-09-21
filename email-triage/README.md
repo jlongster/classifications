@@ -7,7 +7,7 @@ Classifies email by direct-to-recipient status, category, action requirement, an
 - Clean the email and build the state from sender, recipients, subject, date, list headers, and body.
 - Send the state and questions in `classification.json` to Jev 1.13.
 - Enforce that mail written directly to the recipient is always **Personal** or **Work**; automated mail may use any category.
-- For **Email Lists** and **Newsletters**, deterministically extract an entity from List-ID, list address, subject prefix, sender name, or domain. Create a nested label such as `Email Lists/gambit`.
+- Use **Email Lists** only when List-ID or a known list address proves it is a real discussion list; social-network digests are not lists. For Email Lists and Newsletters, deterministically extract an entity and create a nested label such as `Email Lists/gambit`.
 - Keep **Personal** mail in Inbox; archive other categories under their labels.
 - Add `! Action` only when the category is **Personal** or **Work** and action is required. Never apply it to another category.
 - Add exactly one urgency label to every email: `Urgency: 1` is highest and `Urgency: 3` is lowest. Spam and Potential Spam are always `Urgency: 3`.

@@ -13,14 +13,14 @@
     },
     "category": {
       "type": "choice",
-      "instructions": "Classify into exactly one category. HARD RULE: if direct_to_you is yes, category must be personal or work. If direct_to_you is no, any category is allowed, including personal or work.",
+      "instructions": "Classify into exactly one category. HARD RULES: if direct_to_you is yes, category must be personal or work. Email_lists requires explicit mailing-list evidence such as a List-ID header or a known list sender or recipient address; social-network digests and notification emails are not email lists.",
       "criteria": {
-        "personal": "Personal life, family, friends, finances, home, travel, purchases, health, appointments, or other non-work matters.",
+        "personal": "Personal life, family, friends, finances, home, travel, purchases, health, appointments, or other non-work matters. Excludes bulk social-network digests and trending-post notifications.",
         "work": "Professional or technical correspondence, conferences, recruiters, colleagues, business, or industry matters.",
         "github": "Notifications delivered by GitHub about repositories, issues, pull requests, commits, reviews, or discussions.",
-        "email_lists": "Discussion-list mail where members converse, such as a technical or community mailing list.",
+        "email_lists": "A genuine discussion mailing list where members converse, supported by an explicit List-ID header or a known mailing-list sender or recipient address. Excludes Nextdoor, LinkedIn, Facebook, forum digests, social-network updates, and ordinary notification emails.",
         "newsletters": "Only genuine recurring editorial newsletters or publications primarily intended to be read. Excludes marketing, promotions, and product updates.",
-        "potential_spam": "Marketing, promotions, product updates, discounts, cold sales, recruiting blasts, or questionable bulk mail that is not clearly malicious.",
+        "potential_spam": "Marketing, promotions, product updates, discounts, cold sales, recruiting blasts, social-network digests or trending-post notifications, and questionable bulk mail that is not clearly malicious.",
         "spam": "Scams, phishing, fake invoices, malicious mail, or junk with no legitimate purpose."
       }
     },

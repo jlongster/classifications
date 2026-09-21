@@ -108,5 +108,15 @@
       "needs_action": "no",
       "urgency": "urgency_3"
     }
+  },
+  {
+    "name": "nextdoor digest is not an email list",
+    "state": "From: Your Local Neighbors <no-reply@is.email.nextdoor.test>\nTo: Recipient <me@example.test>\nSubject: A controversial neighborhood post\nList-ID: \nBody: See trending posts from people in your neighborhood.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "potential_spam",
+      "needs_action": "no",
+      "urgency": "urgency_3"
+    }
   }
 ]
