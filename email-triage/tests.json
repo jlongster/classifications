@@ -40,8 +40,8 @@
     }
   },
   {
-    "name": "editorial newsletter",
-    "state": "From: Weekly Journal <editor@example.test>\nTo: Recipient <me@example.test>\nSubject: This week's essays\nBody: Three reported essays and an interview from our editorial staff.",
+    "name": "personal author newsletter",
+    "state": "From: Jane Writer <jane@janewriter.test>\nTo: Recipient <me@example.test>\nSubject: This week's letter: paying attention\nBody: Hi friends — welcome to my weekly letter. I’ve been thinking about how we notice small changes in our work. Here’s what happened to me this week. You can unsubscribe below.",
     "expected": {
       "category": "newsletters",
       "needs_action": "no",
@@ -124,7 +124,7 @@
     "state": "From: GoodRx Editorial <editorial@contact.goodrx.test>\nTo: Recipient <me@example.test>\nSubject: 12 High-Fiber Foods That Support Weight Loss\nBody: An educational article explaining nutrition research, food examples, and practical guidance.",
     "expected": {
       "direct_to_you": "no",
-      "category": "newsletters",
+      "category": "potential_spam",
       "needs_action": "no",
       "urgency": "urgency_3"
     }
@@ -185,6 +185,16 @@
     "expected": {
       "direct_to_you": "no",
       "category": "subscriptions",
+      "needs_action": "no",
+      "urgency": "urgency_3"
+    }
+  },
+  {
+    "name": "company-branded editorial publication",
+    "state": "From: Company Daily <editor@company-daily.test>\nTo: Recipient <me@example.test>\nSubject: Today’s technology analysis\nBody: Our editorial team explains the five industry stories readers should know today.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "potential_spam",
       "needs_action": "no",
       "urgency": "urgency_3"
     }
