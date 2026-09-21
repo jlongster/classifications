@@ -184,7 +184,7 @@
     "state": "From: Reddit <noreply@redditmail.test>\nTo: Recipient <me@example.test>\nSubject: Posts you may have missed\nBody: A recurring personalized roundup of posts from communities followed by the recipient.",
     "expected": {
       "direct_to_you": "no",
-      "category": "subscriptions",
+      "category": "potential_spam",
       "needs_action": "no",
       "urgency": "urgency_3"
     }
