@@ -1,5 +1,6 @@
 {
   "model": "jev-1.13.0",
+  "description": "Processing flow:\n- Clean the email and build the state from sender, recipients, subject, date, list headers, and body.\n- Send the state and questions below to Jev to classify human-directed status, category, action, and urgency.\n- Enforce that human-written direct mail is always Personal or Work; automated mail may use any category.\n- For Email Lists and Newsletters, deterministically extract an entity from List-ID, list address, subject prefix, sender name, or domain, then create a nested label such as Email Lists/gambit.\n- Keep Personal mail in Inbox; archive other categories under their labels.\n- Add ! Action when action is required and exactly one urgency label to every email, with Urgency: 1 highest and Urgency: 3 lowest.\n- Move clear scams or phishing to Spam; label questionable bulk mail Potential Spam.\n- Never add or remove stars.",
   "state_template": "From: {{from}}\nTo: {{to}}\nSubject: {{subject}}\nReceived: {{received_at}}\nList-ID: {{list_id_or_empty}}\nList-Unsubscribe: {{list_unsubscribe_or_empty}}\nBody: {{clean_body_or_snippet}}",
   "questions": {
     "human_direct": {
