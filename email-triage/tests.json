@@ -1,0 +1,72 @@
+[
+  {
+    "name": "direct personal request",
+    "state": "From: Friend <friend@example.test>\nTo: Recipient <me@example.test>\nSubject: Dinner Friday?\nBody: Can you let me know tonight whether Friday works?",
+    "expected": {
+      "human_direct": "yes",
+      "category": "personal",
+      "needs_action": "yes",
+      "urgency": "urgency_1"
+    }
+  },
+  {
+    "name": "direct technical colleague",
+    "state": "From: Colleague <dev@example.test>\nTo: Recipient <me@example.test>\nSubject: API design question\nBody: Could you review this proposal sometime this week?",
+    "expected": {
+      "human_direct": "yes",
+      "category": "work",
+      "needs_action": "yes",
+      "urgency": "urgency_2"
+    }
+  },
+  {
+    "name": "automated financial summary",
+    "state": "From: Bank Alerts <alerts@example-bank.test>\nTo: Recipient <me@example.test>\nSubject: Monthly credit summary\nBody: Your latest monthly credit summary is ready.",
+    "expected": {
+      "human_direct": "no",
+      "category": "personal",
+      "needs_action": "no",
+      "urgency": "urgency_3"
+    }
+  },
+  {
+    "name": "github merge notification",
+    "state": "From: GitHub <notifications@github.test>\nTo: repo@noreply.github.test\nSubject: Pull request merged\nBody: Pull request 42 was merged into main.",
+    "expected": {
+      "human_direct": "no",
+      "category": "github",
+      "needs_action": "no",
+      "urgency": "urgency_3"
+    }
+  },
+  {
+    "name": "editorial newsletter",
+    "state": "From: Weekly Journal <editor@example.test>\nTo: Recipient <me@example.test>\nSubject: This week's essays\nBody: Three reported essays and an interview from our editorial staff.",
+    "expected": {
+      "human_direct": "no",
+      "category": "newsletters",
+      "needs_action": "no",
+      "urgency": "urgency_3"
+    }
+  },
+  {
+    "name": "product marketing update",
+    "state": "From: Product Team <marketing@example.test>\nTo: Recipient <me@example.test>\nSubject: New features and 30% off\nBody: Upgrade today to unlock our latest product features.",
+    "expected": {
+      "human_direct": "no",
+      "category": "potential_spam",
+      "needs_action": "no",
+      "urgency": "urgency_3"
+    }
+  },
+  {
+    "name": "urgent security notice without explicit task",
+    "state": "From: Security Monitor <security@example.test>\nTo: Recipient <me@example.test>\nSubject: Active incident detected\nBody: An active incident affecting your account was detected. Investigation is underway.",
+    "expected": {
+      "human_direct": "no",
+      "category": "personal",
+      "needs_action": "no",
+      "urgency": "urgency_1"
+    }
+  }
+]
