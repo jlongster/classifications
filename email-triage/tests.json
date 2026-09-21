@@ -6,8 +6,7 @@
       "human_direct": "yes",
       "category": "personal",
       "needs_action": "yes",
-      "urgency": "urgency_1",
-      "entity": null
+      "urgency": "urgency_1"
     }
   },
   {
@@ -17,8 +16,7 @@
       "human_direct": "yes",
       "category": "work",
       "needs_action": "yes",
-      "urgency": "urgency_2",
-      "entity": null
+      "urgency": "urgency_2"
     }
   },
   {
@@ -28,8 +26,7 @@
       "human_direct": "no",
       "category": "personal",
       "needs_action": "no",
-      "urgency": "urgency_3",
-      "entity": null
+      "urgency": "urgency_3"
     }
   },
   {
@@ -39,8 +36,7 @@
       "human_direct": "no",
       "category": "github",
       "needs_action": "no",
-      "urgency": "urgency_3",
-      "entity": null
+      "urgency": "urgency_3"
     }
   },
   {
@@ -50,9 +46,7 @@
       "human_direct": "no",
       "category": "newsletters",
       "needs_action": "no",
-      "urgency": "urgency_3",
-      "entity": "weekly-journal",
-      "gmail_label": "Newsletters/weekly-journal"
+      "urgency": "urgency_3"
     }
   },
   {
@@ -62,8 +56,7 @@
       "human_direct": "no",
       "category": "potential_spam",
       "needs_action": "no",
-      "urgency": "urgency_3",
-      "entity": null
+      "urgency": "urgency_3"
     }
   },
   {
@@ -73,8 +66,7 @@
       "human_direct": "no",
       "category": "personal",
       "needs_action": "no",
-      "urgency": "urgency_1",
-      "entity": null
+      "urgency": "urgency_1"
     }
   },
   {
@@ -84,9 +76,7 @@
       "human_direct": "no",
       "category": "email_lists",
       "needs_action": "no",
-      "urgency": "urgency_3",
-      "entity": "gambit",
-      "gmail_label": "Email Lists/gambit"
+      "urgency": "urgency_3"
     }
   }
 ]

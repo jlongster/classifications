@@ -1,32 +1,9 @@
 # Email triage
 
-Classifies one email into a Gmail topic category plus independent human-directed, action, and urgency signals.
+The reusable Jev classification is exactly the state template and questions in classification.json. Runtime Gmail behavior—labels, nesting, entity extraction, archiving, Inbox placement, and stars—does not belong in this classification and must be implemented separately.
 
-## Model
+The runtime should read classification.json and pass its questions directly to Jev 1.13. This repository stores the source of truth; it is not itself a deployed email processor.
 
-- Jev 1.13 (jev-1.13.0)
-- Input: sender, recipients, subject, date, and cleaned body/snippet.
+Review a result when category probability is below 0.70, the top-two category gap is below 0.15, or human_direct=yes while category is neither personal nor work.
 
-## Output
-
-- human_direct: yes or no
-- category: personal, work, github, email_lists, newsletters, potential_spam, or spam
-- needs_action: yes or no
-- urgency: urgency_1, urgency_2, or urgency_3
-- entity: a deterministically extracted list/publication name, or null
-
-## Hard routing and Gmail behavior
-
-1. If human_direct=yes, category must be personal or work.
-2. Automated mail may still be personal or work; the rule is one-way.
-3. newsletters is only for recurring editorial publications, never marketing, promotions, or product updates.
-4. Action and urgency are independent. Every email receives urgency; actionable mail also gets ! Action.
-5. urgency_1 is highest and urgency_3 lowest.
-6. Personal mail stays in Inbox. Other categories are archived into their labels.
-7. Stars are manual-only and never changed.
-8. Spam moves to Gmail Spam; potential spam is only labeled and archived.
-9. After Jev chooses email_lists or newsletters, deterministically extract the first reliable entity from List-ID, list address, subject prefix, sender name, or domain. Apply a nested label such as Email Lists/gambit or Newsletters/weekly-journal; otherwise use only the parent label. Jev does not choose or generate entity names.
-
-## Confidence
-
-Flag for review when category probability is below 0.70, the top-two category gap is below 0.15, or a hard rule would be violated. Confidence never relaxes the human-directed routing rule.
+Synthetic classification fixtures are in tests.json.

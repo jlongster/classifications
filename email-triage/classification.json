@@ -1,6 +1,6 @@
 {
   "model": "jev-1.13.0",
-  "state_template": "From: {{from}}\nTo: {{to}}\nSubject: {{subject}}\nReceived: {{received_at}}\nList-ID: {{list_id_or_empty}}\nList-Unsubscribe: {{list_unsubscribe_or_empty}}\nEntity candidates: {{entity_candidates_or_empty}}\nBody: {{clean_body_or_snippet}}",
+  "state_template": "From: {{from}}\nTo: {{to}}\nSubject: {{subject}}\nReceived: {{received_at}}\nList-ID: {{list_id_or_empty}}\nList-Unsubscribe: {{list_unsubscribe_or_empty}}\nBody: {{clean_body_or_snippet}}",
   "questions": {
     "human_direct": {
       "type": "choice",
@@ -39,35 +39,6 @@
         "urgency_2": "Medium: deserves attention within several days.",
         "urgency_3": "Lowest: no immediate time pressure; can wait or is merely informational."
       }
-    }
-  },
-  "postprocessing": {
-    "entity_extraction": {
-      "apply_after_category": "Only when category is email_lists or newsletters.",
-      "strategy": "Deterministic; Jev does not choose or generate the entity.",
-      "sources_in_priority_order": [
-        "List-ID header name or host",
-        "mailing-list address local-part",
-        "stable bracketed list prefix in subject",
-        "sender display name",
-        "sender domain or publication domain"
-      ],
-      "normalization": "Strip generic words such as list, newsletter, digest, mail, notifications, noreply, and team; remove punctuation; lowercase; collapse whitespace and hyphens; reject generic or empty results.",
-      "acceptance": "Use the first reliable normalized result. If none is reliable, omit the child label.",
-      "maximum_length": 60
-    },
-    "entity": {
-      "apply_only_to_categories": [
-        "email_lists",
-        "newsletters"
-      ],
-      "source": "deterministic preprocessing.entity_extraction",
-      "on_failure": "Do not create a child label; use only the parent category label.",
-      "slug": "lowercase ASCII when practical; trim; replace runs of non-alphanumeric characters with one hyphen; remove leading/trailing hyphens; maximum 60 characters"
-    },
-    "gmail_label": {
-      "email_lists": "Email Lists/{{entity_slug}}",
-      "newsletters": "Newsletters/{{entity_slug}}"
     }
   }
 }
