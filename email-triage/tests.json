@@ -258,5 +258,45 @@
       "needs_action": "no",
       "urgency": "none"
     }
+  },
+  {
+    "name": "company tech publication is potential spam",
+    "state": "From: The Tech Brand <digest@brand-publication.test>\nTo: Recipient <me@example.test>\nSubject: AI news today\nBody: Our editorial team rounds up the latest AI industry stories.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "potential_spam",
+      "needs_action": "no",
+      "urgency": "none"
+    }
+  },
+  {
+    "name": "financial product promotion is potential spam",
+    "state": "From: Investment App <offers@investment-app.test>\nTo: Recipient <me@example.test>\nSubject: New IPO now available\nBody: Explore this investment opportunity and request shares today.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "potential_spam",
+      "needs_action": "no",
+      "urgency": "none"
+    }
+  },
+  {
+    "name": "github token security notification remains github",
+    "state": "From: GitHub <noreply@github.test>\nTo: Recipient <me@example.test>\nSubject: A fine-grained personal access token was added\nBody: A token was recently created on your GitHub account.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "github",
+      "needs_action": "no",
+      "urgency": "none"
+    }
+  },
+  {
+    "name": "mailing list unsubscribe delivery failure",
+    "state": "From: Mail Delivery Subsystem <mailer-daemon@example.test>\nTo: Recipient <me@example.test>\nSubject: Delivery Status Notification (Failure)\nBody: Your unsubscribe command to dev-list-request@lists.example.test could not be delivered.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "email_lists",
+      "needs_action": "no",
+      "urgency": "none"
+    }
   }
 ]
