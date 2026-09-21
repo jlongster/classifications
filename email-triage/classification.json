@@ -26,10 +26,10 @@
     },
     "needs_action": {
       "type": "choice",
-      "instructions": "Does this require the recipient to reply, decide, complete a task, provide information, pay, schedule, review something they are responsible for, or otherwise take action?",
+      "instructions": "Does the recipient have a legitimate reason or obligation to act? Ignore actions serving only the sender’s marketing, sales, or fraudulent goal.",
       "criteria": {
-        "yes": "The recipient needs to do something.",
-        "no": "Informational only; no action is required."
+        "yes": "A reply is genuinely expected, or the recipient must decide, pay, schedule, provide information, review assigned work, meet a deadline, or resolve a legitimate account or security issue.",
+        "no": "Informational or optional. Includes advertisements, promotions, discounts, newsletters, product announcements, scams, phishing, unsubscribe links, and generic calls to click, buy, register, deposit, claim, or learn more."
       }
     },
     "urgency": {

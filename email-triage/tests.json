@@ -78,5 +78,15 @@
       "needs_action": "no",
       "urgency": "urgency_3"
     }
+  },
+  {
+    "name": "casino promotion with imperative calls to action",
+    "state": "From: Casino Bonus <random@example.test>\nTo: Recipient <me@example.test>\nSubject: Your 400% bonus is ready\nBody: Register now, deposit $25, enter the promo code, and claim your bonus today.",
+    "expected": {
+      "human_direct": "no",
+      "category": "potential_spam",
+      "needs_action": "no",
+      "urgency": "urgency_3"
+    }
   }
 ]
