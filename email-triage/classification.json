@@ -15,12 +15,12 @@
       "type": "choice",
       "instructions": "Classify into exactly one category. HARD RULES: if direct_to_you is yes, category must be personal or work. Email_lists requires explicit mailing-list evidence such as a List-ID header or a known list sender or recipient address; social-network digests and notification emails are not email lists.",
       "criteria": {
-        "personal": "Personal life, family, friends, finances, home, travel, purchases, health, appointments, or other non-work matters. Excludes bulk social-network digests and trending-post notifications.",
+        "personal": "Personal life, family, friends, finances, home, travel, purchases, health, appointments, memberships, clubs, community organizations, household services, and recurring personal activities. Includes legitimate automated member notices and event reminders from organizations with an existing personal relationship. Excludes unsolicited bulk social-network digests and trending-post notifications.",
         "work": "Professional or technical correspondence, conferences, recruiters, colleagues, business, or industry matters.",
         "github": "Notifications delivered by GitHub about repositories, issues, pull requests, commits, reviews, or discussions.",
         "email_lists": "A genuine discussion mailing list where members converse, supported by an explicit List-ID header or a known mailing-list sender or recipient address. Excludes Nextdoor, LinkedIn, Facebook, forum digests, social-network updates, and ordinary notification emails.",
         "newsletters": "Recurring, content-first editorial publications primarily intended to be read, including reported, educational, or curated articles. A company may publish one if the message is genuinely editorial. Excludes discounts, sales campaigns, product updates, product announcements, and other promotion-first mail.",
-        "potential_spam": "Legitimate or plausibly legitimate but unwanted bulk mail: marketing, promotions, product updates, discounts, cold sales, recruiting blasts, social-network digests, trending-post notifications, and unclear bulk outreach. Use this only when the sender and purpose are not obviously fraudulent or malicious.",
+        "potential_spam": "Legitimate or plausibly legitimate but unwanted bulk acquisition or promotion: unsolicited marketing, discounts, product updates, cold sales, recruiting blasts, social-network digests, trending-post notifications, and unclear bulk outreach. Do not use for informational notices or event reminders from an existing personal membership or service unless the message is primarily promotional.",
         "spam": "Clearly deceptive, fraudulent, malicious, or worthless junk. Includes phishing, fake invoices, fabricated accounts or rewards, random-domain casino offers, fake dating messages, adult bait, miracle-cure claims, impersonation, and similar scam patterns."
       }
     },

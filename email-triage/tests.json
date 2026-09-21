@@ -168,5 +168,15 @@
       "needs_action": "yes",
       "urgency": "urgency_1"
     }
+  },
+  {
+    "name": "automated event reminder from existing personal membership",
+    "state": "From: Community Club <no-reply@club-platform.test>\nTo: Recipient <me@example.test>\nSubject: Event reminder for Wednesday\nBody: Good afternoon. This is a reminder that the members event is Wednesday at 6 PM on the club court, with food afterward.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "personal",
+      "needs_action": "no",
+      "urgency": "urgency_3"
+    }
   }
 ]
