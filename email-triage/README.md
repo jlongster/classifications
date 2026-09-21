@@ -8,7 +8,7 @@ Classifies email by direct-to-recipient status, category, action requirement, an
 - Group messages by Gmail `threadId`, then send one state per thread to Jev 1.13 using the newest message plus bounded recent context.
 - Base direct-to-you, action, and urgency on the latest unanswered inbound message; apply one consistent classification to the thread.
 - Enforce that mail written directly to the recipient is always **Personal** or **Work**; automated mail may use any category.
-- Use **Email Lists** only when List-ID or a known list address proves it is a real discussion list; social-network digests are not lists. For Email Lists and Newsletters, deterministically extract an entity and create a nested label such as `Email Lists/gambit`.
+- Use **Email Lists** only when List-ID or a known list address proves it is a real discussion list; social-network digests are not lists. For Email Lists, deterministically extract an entity and create a nested label such as `Email Lists/gambit`. All newsletters use the single top-level `Newsletters` label; never create newsletter sublabels.
 - Keep **Personal** mail in Inbox; archive other categories under their labels.
 - Add `Action` only when the category is **Personal** or **Work** and action is required. Never apply it to another category.
 - Add exactly one urgency label to every email: `Urgency/1` is highest and `Urgency/3` is lowest. Spam and Potential Spam are always `Urgency/3`.
