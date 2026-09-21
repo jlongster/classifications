@@ -338,5 +338,15 @@
       "needs_action": "no",
       "urgency": "none"
     }
+  },
+  {
+    "name": "automated linkedin position nudge is potential spam",
+    "state": "From: LinkedIn <notifications-noreply@linkedin.test>\nTo: Recipient <me@example.test>\nSubject: Your position is added — take these next steps\nBody: Complete your profile, follow recommended companies, and grow your network.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "potential_spam",
+      "needs_action": "no",
+      "urgency": "none"
+    }
   }
 ]
