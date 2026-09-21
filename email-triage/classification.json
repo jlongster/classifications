@@ -1,7 +1,7 @@
 {
   "model": "jev-1.13.0",
   "description": "Classifies email by direct-to-recipient status, category, action requirement, and urgency. See README.md for the complete processing flow.",
-  "state_template": "From: {{from}}\nTo: {{to}}\nSubject: {{subject}}\nReceived: {{received_at}}\nList-ID: {{list_id_or_empty}}\nList-Unsubscribe: {{list_unsubscribe_or_empty}}\nBody: {{clean_body_or_snippet}}",
+  "state_template": "Current message:\nFrom: {{from}}\nTo: {{to}}\nSubject: {{subject}}\nReceived: {{received_at}}\nList-ID: {{list_id_or_empty}}\nList-Unsubscribe: {{list_unsubscribe_or_empty}}\nBody: {{clean_body_or_snippet}}\n\nRecent thread context:\n{{recent_thread_messages_or_empty}}",
   "questions": {
     "direct_to_you": {
       "type": "choice",

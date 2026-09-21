@@ -5,7 +5,8 @@ Classifies email by direct-to-recipient status, category, action requirement, an
 ## Processing flow
 
 - Clean the email and build the state from sender, recipients, subject, date, list headers, and body.
-- Send the state and questions in `classification.json` to Jev 1.13.
+- Group messages by Gmail `threadId`, then send one state per thread to Jev 1.13 using the newest message plus bounded recent context.
+- Base direct-to-you, action, and urgency on the latest unanswered inbound message; apply one consistent classification to the thread.
 - Enforce that mail written directly to the recipient is always **Personal** or **Work**; automated mail may use any category.
 - Use **Email Lists** only when List-ID or a known list address proves it is a real discussion list; social-network digests are not lists. For Email Lists and Newsletters, deterministically extract an entity and create a nested label such as `Email Lists/gambit`.
 - Keep **Personal** mail in Inbox; archive other categories under their labels.
@@ -19,6 +20,12 @@ Classifies email by direct-to-recipient status, category, action requirement, an
 
 The runtime should read `classification.json` and pass its questions directly to Jev. Gmail labeling and routing are separate deterministic runtime behavior.
 
-Review a result when category probability is below 0.70, the top-two category gap is below 0.15, or `direct_to_you=yes` while category is neither `personal` nor `work`.
+## Confidence review
+
+- Review a result when the selected probability is below 0.70 or the top-two gap is below 0.15.
+- Check category and direct-to-you for every thread.
+- Check action only for Personal and Work; other categories are hard-set to no action.
+- Check urgency except for Spam and Potential Spam, which are hard-set to Urgency 3.
+- Make no automatic Gmail change for a thread requiring review.
 
 Synthetic fixtures are in `tests.json`.

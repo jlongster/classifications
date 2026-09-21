@@ -158,5 +158,15 @@
       "needs_action": "no",
       "urgency": "urgency_3"
     }
+  },
+  {
+    "name": "thread classification follows latest unanswered inbound",
+    "state": "Current message:\nFrom: Colleague <dev@example.test>\nTo: Recipient <me@example.test>\nSubject: Re: API design\nBody: Could you approve this by tomorrow?\n\nRecent thread context:\nEarlier, recipient sent a draft. Colleague replied with requested changes.",
+    "expected": {
+      "direct_to_you": "yes",
+      "category": "work",
+      "needs_action": "yes",
+      "urgency": "urgency_1"
+    }
   }
 ]
