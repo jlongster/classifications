@@ -39,19 +39,12 @@
         "urgency_2": "Medium: deserves attention within several days.",
         "urgency_3": "Lowest: no immediate time pressure; can wait or is merely informational."
       }
-    },
-    "entity": {
-      "type": "choice",
-      "instructions": "Only when category is email_lists or newsletters, choose the candidate that identifies the recurring list or editorial publication itself. Choose none when no candidate is reliable. Never infer an entity for another category.",
-      "criteria_template": {
-        "{{candidate}}": "This candidate is the stable name of the email list or editorial publication.",
-        "none": "No candidate reliably identifies the recurring list or publication."
-      }
     }
   },
   "preprocessing": {
-    "entity_candidates": {
-      "apply_when": "Always generate candidates before Jev evaluation; use them only when category is email_lists or newsletters.",
+    "entity_extraction": {
+      "apply_after_category": "Only when category is email_lists or newsletters.",
+      "strategy": "Deterministic; Jev does not choose or generate the entity.",
       "sources_in_priority_order": [
         "List-ID header name or host",
         "mailing-list address local-part",
@@ -60,7 +53,8 @@
         "sender domain or publication domain"
       ],
       "normalization": "Strip generic words such as list, newsletter, digest, mail, notifications, noreply, and team; remove punctuation; lowercase; collapse whitespace and hyphens; reject generic or empty results.",
-      "maximum_candidates": 5
+      "acceptance": "Use the first reliable normalized result. If none is reliable, omit the child label.",
+      "maximum_length": 60
     }
   },
   "postprocessing": {
@@ -69,7 +63,7 @@
         "email_lists",
         "newsletters"
       ],
-      "minimum_choice_probability": 0.7,
+      "source": "deterministic preprocessing.entity_extraction",
       "on_failure": "Do not create a child label; use only the parent category label.",
       "slug": "lowercase ASCII when practical; trim; replace runs of non-alphanumeric characters with one hyphen; remove leading/trailing hyphens; maximum 60 characters"
     },

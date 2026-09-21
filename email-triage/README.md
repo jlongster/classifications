@@ -13,7 +13,7 @@ Classifies one email into a Gmail topic category plus independent human-directed
 - category: personal, work, github, email_lists, newsletters, potential_spam, or spam
 - needs_action: yes or no
 - urgency: urgency_1, urgency_2, or urgency_3
-- entity: a normalized list/publication name, or null
+- entity: a deterministically extracted list/publication name, or null
 
 ## Hard routing and Gmail behavior
 
@@ -25,7 +25,7 @@ Classifies one email into a Gmail topic category plus independent human-directed
 6. Personal mail stays in Inbox. Other categories are archived into their labels.
 7. Stars are manual-only and never changed.
 8. Spam moves to Gmail Spam; potential spam is only labeled and archived.
-9. For email_lists and newsletters, extract a stable entity from headers, sender, domain, or subject candidates. If Jev selects it with probability >= 0.70, apply a nested label such as Email Lists/gambit or Newsletters/weekly-journal. Otherwise use only the parent label.
+9. After Jev chooses email_lists or newsletters, deterministically extract the first reliable entity from List-ID, list address, subject prefix, sender name, or domain. Apply a nested label such as Email Lists/gambit or Newsletters/weekly-journal; otherwise use only the parent label. Jev does not choose or generate entity names.
 
 ## Confidence
 
