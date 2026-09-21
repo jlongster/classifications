@@ -26,6 +26,6 @@ The runtime should read `classification.json` and pass its questions directly to
 - Check category and direct-to-you for every thread.
 - Check action only for Personal and Work; other categories are hard-set to no action.
 - Check urgency except for Spam and Potential Spam, which are hard-set to Urgency 3.
-- Make no automatic Gmail change for a thread requiring review.
+- For a thread requiring review, add `! Review` and make no other automatic changes: do not apply category, action, urgency, archive, Inbox, or Spam operations. Remove `! Review` after the thread is resolved or successfully reclassified.
 
 Synthetic fixtures are in `tests.json`.
