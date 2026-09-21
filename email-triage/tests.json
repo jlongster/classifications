@@ -318,5 +318,25 @@
       "needs_action": "no",
       "urgency": "none"
     }
+  },
+  {
+    "name": "financial service re-engagement summary is potential spam",
+    "state": "From: Credit Service <alerts@financial-service.test>\nTo: Recipient <me@example.test>\nSubject: Here is your latest credit summary\nBody: We have not seen you in a while — let’s catch up on what you have missed. Sign in to explore recent insights.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "potential_spam",
+      "needs_action": "no",
+      "urgency": "none"
+    }
+  },
+  {
+    "name": "specific credit change alert remains personal",
+    "state": "From: Credit Service <alerts@financial-service.test>\nTo: Recipient <me@example.test>\nSubject: Your credit score changed\nBody: Your monitored credit score decreased by 18 points on September 20.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "personal",
+      "needs_action": "no",
+      "urgency": "none"
+    }
   }
 ]
