@@ -26,10 +26,10 @@
     },
     "needs_action": {
       "type": "choice",
-      "instructions": "Does the recipient have a legitimate reason or obligation to act? Ignore actions serving only the sender’s marketing, sales, or fraudulent goal.",
+      "instructions": "Only email categorized as personal or work can require action. For every other category, choose no. For personal or work, decide whether the recipient has a legitimate reason or obligation to act; ignore actions serving only the sender’s marketing, sales, or fraudulent goal.",
       "criteria": {
-        "yes": "A reply is genuinely expected, or the recipient must decide, pay, schedule, provide information, review assigned work, meet a deadline, or resolve a legitimate account or security issue.",
-        "no": "Informational or optional. Includes advertisements, promotions, discounts, newsletters, product announcements, scams, phishing, unsubscribe links, and generic calls to click, buy, register, deposit, claim, or learn more."
+        "yes": "The category is personal or work, and a reply is genuinely expected or the recipient must decide, pay, schedule, provide information, review assigned work, meet a deadline, or resolve a legitimate account or security issue.",
+        "no": "The category is not personal or work, or the message is informational or optional. Includes advertisements, promotions, discounts, newsletters, product announcements, GitHub notifications, email lists, scams, phishing, unsubscribe links, and generic calls to click, buy, register, deposit, claim, or learn more."
       }
     },
     "urgency": {

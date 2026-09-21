@@ -88,5 +88,15 @@
       "needs_action": "no",
       "urgency": "urgency_3"
     }
+  },
+  {
+    "name": "github review request cannot become action",
+    "state": "From: GitHub <notifications@github.test>\nTo: repo@noreply.github.test\nSubject: Review requested on pull request 42\nBody: A maintainer requested your review on this pull request.",
+    "expected": {
+      "human_direct": "no",
+      "category": "github",
+      "needs_action": "no",
+      "urgency": "urgency_2"
+    }
   }
 ]

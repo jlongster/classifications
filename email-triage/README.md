@@ -9,7 +9,7 @@ Classifies email by human-directed status, category, action requirement, and urg
 - Enforce that human-written direct mail is always **Personal** or **Work**; automated mail may use any category.
 - For **Email Lists** and **Newsletters**, deterministically extract an entity from List-ID, list address, subject prefix, sender name, or domain. Create a nested label such as `Email Lists/gambit`.
 - Keep **Personal** mail in Inbox; archive other categories under their labels.
-- Add `! Action` when action is required.
+- Add `! Action` only when the category is **Personal** or **Work** and action is required. Never apply it to another category.
 - Add exactly one urgency label to every email: `Urgency: 1` is highest and `Urgency: 3` is lowest.
 - Move clear scams or phishing to Spam; label questionable bulk mail **Potential Spam**.
 - Never add or remove stars.
