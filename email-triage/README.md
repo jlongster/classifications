@@ -23,10 +23,10 @@ The runtime should read `classification.json` and pass its questions directly to
 
 ## Confidence review
 
-- Review a result when the selected probability is below 0.70 or the top-two gap is below 0.15.
-- Check category and direct-to-you for every thread.
-- Check action only for Personal and Work; other categories are hard-set to no action.
-- Check urgency except for Spam and Potential Spam, which are hard-set to `Urgency/3`.
-- For a thread requiring review, add `Review` and make no other automatic changes: do not apply category, action, urgency, archive, Inbox, or Spam operations. Remove `Review` after the thread is resolved or successfully reclassified.
+- Only category confidence can send a thread to `Review`: review when the chosen category probability is below 0.70 or its top-two gap is below 0.15.
+- Direct-to-you, action, and urgency confidence never block a confident category from being applied.
+- Add `Action` only when the category is Personal or Work, Jev chooses yes, its probability is at least 0.70, and its top-two gap is at least 0.15. Otherwise omit `Action` without adding `Review`.
+- Spam and Potential Spam are always `Urgency/3`. For other categories, use Jev’s urgency only when its probability is at least 0.70 and its top-two gap is at least 0.15; otherwise default to `Urgency/3` without adding `Review`.
+- When category confidence requires review, add only `Review` and make no other automatic changes. Remove `Review` after a confident category is applied.
 
 Synthetic fixtures are in `tests.json`.
