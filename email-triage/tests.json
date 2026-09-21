@@ -348,5 +348,25 @@
       "needs_action": "no",
       "urgency": "none"
     }
+  },
+  {
+    "name": "unsolicited substack product announcement is potential spam",
+    "state": "From: Product Founder <founder@substack.test>\nTo: Recipient <me@example.test>\nSubject: Introducing the world’s most efficient routing model\nBody: Today we are launching our new commercial routing model. Try the product and share it with your team.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "potential_spam",
+      "needs_action": "no",
+      "urgency": "none"
+    }
+  },
+  {
+    "name": "generic financial service weekly recap is potential spam",
+    "state": "From: Financial Service <noreply@financial-service.test>\nTo: Recipient <me@example.test>\nSubject: Your weekly recap is ready\nBody: Catch up on general insights, recommendations, and content from this week.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "potential_spam",
+      "needs_action": "no",
+      "urgency": "none"
+    }
   }
 ]
