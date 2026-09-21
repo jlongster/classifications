@@ -198,5 +198,15 @@
       "needs_action": "no",
       "urgency": "urgency_3"
     }
+  },
+  {
+    "name": "school bulletin sent to parents",
+    "state": "From: School Principal <school_mail@district.test>\nTo: Parent <me@example.test>\nSubject: Sunday family update\nBody: Happy Sunday families. Tomorrow is a student holiday. We look forward to welcoming students back Tuesday. Here is this week’s school bulletin and upcoming family events.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "personal",
+      "needs_action": "no",
+      "urgency": "urgency_3"
+    }
   }
 ]
