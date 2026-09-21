@@ -41,7 +41,7 @@
       }
     }
   },
-  "preprocessing": {
+  "postprocessing": {
     "entity_extraction": {
       "apply_after_category": "Only when category is email_lists or newsletters.",
       "strategy": "Deterministic; Jev does not choose or generate the entity.",
@@ -55,9 +55,7 @@
       "normalization": "Strip generic words such as list, newsletter, digest, mail, notifications, noreply, and team; remove punctuation; lowercase; collapse whitespace and hyphens; reject generic or empty results.",
       "acceptance": "Use the first reliable normalized result. If none is reliable, omit the child label.",
       "maximum_length": 60
-    }
-  },
-  "postprocessing": {
+    },
     "entity": {
       "apply_only_to_categories": [
         "email_lists",
