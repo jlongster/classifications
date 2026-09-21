@@ -298,5 +298,25 @@
       "needs_action": "no",
       "urgency": "none"
     }
+  },
+  {
+    "name": "hotel feedback request is potential spam",
+    "state": "From: Hotel Guest Experience <survey@hotel-feedback.test>\nTo: Recipient <me@example.test>\nSubject: Please share feedback about your stay\nBody: We hope you enjoyed your stay. Please take our optional survey and tell us about your experience.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "potential_spam",
+      "needs_action": "no",
+      "urgency": "none"
+    }
+  },
+  {
+    "name": "hotel booking confirmation remains personal",
+    "state": "From: Hotel Reservations <reservations@hotel.test>\nTo: Recipient <me@example.test>\nSubject: Your reservation is confirmed\nBody: Your booking for October 4–6 is confirmed. Confirmation number ABC123.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "personal",
+      "needs_action": "no",
+      "urgency": "none"
+    }
   }
 ]
