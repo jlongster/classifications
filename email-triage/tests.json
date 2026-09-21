@@ -5,7 +5,7 @@
     "expected": {
       "category": "personal",
       "needs_action": "yes",
-      "urgency": "urgency_1",
+      "urgency": "high",
       "direct_to_you": "yes"
     }
   },
@@ -15,7 +15,7 @@
     "expected": {
       "category": "work",
       "needs_action": "yes",
-      "urgency": "urgency_2",
+      "urgency": "low",
       "direct_to_you": "yes"
     }
   },
@@ -25,7 +25,7 @@
     "expected": {
       "category": "personal",
       "needs_action": "no",
-      "urgency": "urgency_3",
+      "urgency": "none",
       "direct_to_you": "no"
     }
   },
@@ -35,7 +35,7 @@
     "expected": {
       "category": "github",
       "needs_action": "no",
-      "urgency": "urgency_3",
+      "urgency": "none",
       "direct_to_you": "no"
     }
   },
@@ -45,7 +45,7 @@
     "expected": {
       "category": "newsletters",
       "needs_action": "no",
-      "urgency": "urgency_3",
+      "urgency": "none",
       "direct_to_you": "no"
     }
   },
@@ -55,7 +55,7 @@
     "expected": {
       "category": "potential_spam",
       "needs_action": "no",
-      "urgency": "urgency_3",
+      "urgency": "none",
       "direct_to_you": "no"
     }
   },
@@ -65,7 +65,7 @@
     "expected": {
       "category": "personal",
       "needs_action": "no",
-      "urgency": "urgency_1",
+      "urgency": "high",
       "direct_to_you": "no"
     }
   },
@@ -75,7 +75,7 @@
     "expected": {
       "category": "email_lists",
       "needs_action": "no",
-      "urgency": "urgency_3",
+      "urgency": "none",
       "direct_to_you": "no"
     }
   },
@@ -85,7 +85,7 @@
     "expected": {
       "category": "potential_spam",
       "needs_action": "no",
-      "urgency": "urgency_3",
+      "urgency": "none",
       "direct_to_you": "no"
     }
   },
@@ -95,7 +95,7 @@
     "expected": {
       "category": "github",
       "needs_action": "no",
-      "urgency": "urgency_2",
+      "urgency": "low",
       "direct_to_you": "no"
     }
   },
@@ -106,7 +106,7 @@
       "direct_to_you": "no",
       "category": "github",
       "needs_action": "no",
-      "urgency": "urgency_3"
+      "urgency": "none"
     }
   },
   {
@@ -116,7 +116,7 @@
       "direct_to_you": "no",
       "category": "potential_spam",
       "needs_action": "no",
-      "urgency": "urgency_3"
+      "urgency": "none"
     }
   },
   {
@@ -126,7 +126,7 @@
       "direct_to_you": "no",
       "category": "potential_spam",
       "needs_action": "no",
-      "urgency": "urgency_3"
+      "urgency": "none"
     }
   },
   {
@@ -136,7 +136,7 @@
       "direct_to_you": "no",
       "category": "potential_spam",
       "needs_action": "no",
-      "urgency": "urgency_3"
+      "urgency": "none"
     }
   },
   {
@@ -146,7 +146,7 @@
       "direct_to_you": "no",
       "category": "spam",
       "needs_action": "no",
-      "urgency": "urgency_3"
+      "urgency": "none"
     }
   },
   {
@@ -156,7 +156,7 @@
       "direct_to_you": "no",
       "category": "spam",
       "needs_action": "no",
-      "urgency": "urgency_3"
+      "urgency": "none"
     }
   },
   {
@@ -166,7 +166,7 @@
       "direct_to_you": "yes",
       "category": "work",
       "needs_action": "yes",
-      "urgency": "urgency_1"
+      "urgency": "high"
     }
   },
   {
@@ -176,7 +176,7 @@
       "direct_to_you": "no",
       "category": "personal",
       "needs_action": "no",
-      "urgency": "urgency_3"
+      "urgency": "none"
     }
   },
   {
@@ -186,7 +186,7 @@
       "direct_to_you": "no",
       "category": "potential_spam",
       "needs_action": "no",
-      "urgency": "urgency_3"
+      "urgency": "none"
     }
   },
   {
@@ -196,7 +196,7 @@
       "direct_to_you": "no",
       "category": "potential_spam",
       "needs_action": "no",
-      "urgency": "urgency_3"
+      "urgency": "none"
     }
   },
   {
@@ -206,7 +206,7 @@
       "direct_to_you": "no",
       "category": "personal",
       "needs_action": "no",
-      "urgency": "urgency_3"
+      "urgency": "none"
     }
   },
   {
@@ -216,7 +216,7 @@
       "direct_to_you": "no",
       "category": "potential_spam",
       "needs_action": "no",
-      "urgency": "urgency_3"
+      "urgency": "none"
     }
   },
   {
@@ -226,7 +226,7 @@
       "direct_to_you": "yes",
       "category": "work",
       "needs_action": "no",
-      "urgency": "urgency_3"
+      "urgency": "none"
     }
   },
   {
@@ -236,7 +236,7 @@
       "direct_to_you": "no",
       "category": "potential_spam",
       "needs_action": "no",
-      "urgency": "urgency_3"
+      "urgency": "none"
     }
   },
   {
@@ -246,7 +246,7 @@
       "direct_to_you": "no",
       "category": "personal",
       "needs_action": "no",
-      "urgency": "urgency_3"
+      "urgency": "none"
     }
   },
   {
@@ -256,7 +256,7 @@
       "direct_to_you": "no",
       "category": "potential_spam",
       "needs_action": "no",
-      "urgency": "urgency_3"
+      "urgency": "none"
     }
   }
 ]

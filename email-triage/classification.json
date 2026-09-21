@@ -34,11 +34,11 @@
     },
     "urgency": {
       "type": "choice",
-      "instructions": "Assign urgency independently of whether action is required. HARD RULE: spam and potential_spam are always urgency_3; ignore fabricated scarcity, threats, and promotional deadlines.",
+      "instructions": "Assign urgency independently of whether action is required. Choose high only for legitimate immediate urgency; choose low for legitimate attention needed within several days; otherwise choose none. Spam, potential_spam, marketing, fabricated scarcity, and optional informational mail always have none.",
       "criteria": {
-        "urgency_1": "Highest: a legitimate message needs attention today, someone is blocked, or a real deadline or security risk is within 24 hours.",
-        "urgency_2": "Medium: a legitimate message deserves attention within several days.",
-        "urgency_3": "Lowest: no immediate legitimate time pressure; informational, optional, spam, potential spam, marketing, or fabricated urgency."
+        "high": "Highest urgency: someone is blocked, immediate intervention is needed, or a real deadline or security risk is within 24 hours.",
+        "low": "Needs legitimate attention within several days, but nobody is currently blocked and it is not immediately urgent.",
+        "none": "No meaningful time pressure; informational, optional, routine, marketing, spam, potential spam, or fabricated urgency."
       }
     }
   }
