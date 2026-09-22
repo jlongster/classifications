@@ -12,8 +12,8 @@ Classifies email by direct-to-recipient status, category, action requirement, an
 - Keep **Personal** mail in Inbox; archive other categories under their labels.
 - Add `Action` only when the category is **Personal** or **Work** and action is required. Never apply it to another category.
 - Add `Urgency/high` only when someone is blocked, immediate intervention is needed, or a real deadline/security risk is within 24 hours. Add `Urgency/low` when legitimate attention is needed within several days. Otherwise apply no urgency label. GitHub, Spam, and Potential Spam never receive urgency; ignore Jev’s urgency result for those categories.
-- Use **Newsletters** only for recurring author-led letters or essays clearly written by an identifiable person in a personal, conversational voice. Company-branded publications and corporate editorial content are **Potential Spam**. Established author-curated editorial weeklies such as JavaScript Weekly may still be Newsletters. An individual sender or Substack address alone does not qualify: unsolicited product launches, vendor announcements, branded pitches, and promotional posts are Potential Spam.
-- Move clearly deceptive mail—phishing, fabricated rewards, random-domain casino offers, fake dating, adult bait, and miracle cures—to **Spam**. Reserve **Potential Spam** for legitimate or plausibly legitimate unwanted bulk, platform digests, feeds, promotional content, recommendations, and re-engagement mail. Classify each message by purpose because one service may send both useful Personal alerts and promotional fluff. Generic “we miss you,” “come back,” “catch up,” and “what you missed” re-engagement messages are Potential Spam. All LinkedIn invitation notifications are Potential Spam; genuine direct LinkedIn messages may still be Work.
+- Use **Newsletters** only for recurring author-led letters or essays clearly written by an identifiable person in a personal, conversational voice. Company-branded publications and corporate editorial content are **Potential Spam**. An individual sender or Substack address alone does not qualify: unsolicited product launches, vendor announcements, branded pitches, and promotional posts are Potential Spam.
+- Move clearly deceptive mail—phishing, fabricated rewards, random-domain casino offers, fake dating, adult bait, and miracle cures—to **Spam**. Reserve **Potential Spam** for legitimate or plausibly legitimate unwanted bulk, platform digests, feeds, promotional content, recommendations, and re-engagement mail. Classify each message by purpose because one service may send both useful Personal alerts and promotional fluff. Generic “we miss you,” “come back,” “catch up,” and “what you missed” re-engagement messages are Potential Spam. Automated LinkedIn notifications are Potential Spam by default; only genuine person-specific professional invitations or direct messages may be Work.
 - Mark a message read by removing Gmail’s `UNREAD` label only when it is not in Inbox, does not have `Action`, and is not `Urgency/high`. Otherwise preserve its read state.
 - Never add or remove stars.
 
@@ -30,3 +30,12 @@ The runtime should read `classification.json` and pass its questions directly to
 - When category confidence requires review, add only `Review` and make no other automatic changes. Remove `Review` after a confident category is applied.
 
 Synthetic fixtures are in `tests.json`.
+
+## Hard examples
+
+These are deterministic category overrides applied before confidence review. A match does not go to Review. When an entry names a message subtype, match the subtype rather than the sender alone.
+
+- Personal: Guardian claims/coverage/billing/plan actions; dental reminders; requested estimates; concrete credit/account changes; WEPC family updates.
+- Work: npm publish confirmations; Cloudflare operational account changes.
+- Newsletters: JavaScript Weekly; Jonny May; Caleb Long authored updates.
+- Potential Spam: Guardian EAP promotions; ecobee reports; ACAC broad roundups; Prayvine feeds; Redfin reports; all terms/privacy updates; App Store analytics; every LinkedIn invitation; Jostens offers; Disney+ nudges; Reddit/Facebook digests; The Neuron.

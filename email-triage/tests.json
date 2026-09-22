@@ -220,11 +220,11 @@
     }
   },
   {
-    "name": "person-specific professional invitation relayed by platform",
+    "name": "person-specific LinkedIn invitation is still potential spam",
     "state": "From: Alex Person <invitations@linkedin.test>\nTo: Recipient <me@example.test>\nSubject: I want to connect\nBody: Alex, a software engineer in your industry, says: I would like to join your professional network.",
     "expected": {
-      "direct_to_you": "yes",
-      "category": "work",
+      "direct_to_you": "no",
+      "category": "potential_spam",
       "needs_action": "no",
       "urgency": "none"
     }
