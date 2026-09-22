@@ -368,5 +368,105 @@
       "needs_action": "no",
       "urgency": "none"
     }
+  },
+  {
+    "name": "javascript weekly editorial digest",
+    "state": "From: JavaScript Weekly <jsw@peterc.test>\nSubject: Functional programming jargon, mapped out\nBody: Issue 802, curated by Peter Cooper. This week’s JavaScript articles and tools.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "newsletters",
+      "needs_action": "no",
+      "urgency": "none"
+    }
+  },
+  {
+    "name": "guardian claim notice",
+    "state": "From: Guardian <claims@guardian.test>\nSubject: Your dental claim was processed\nBody: Your claim has been processed. Review the explanation of benefits.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "personal",
+      "needs_action": "no",
+      "urgency": "none"
+    }
+  },
+  {
+    "name": "guardian eap promotion",
+    "state": "From: Guardian Benefits <benefits@guardian.test>\nSubject: You have more support than you realize\nBody: Explore your optional Employee Assistance Program and wellness resources.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "potential_spam",
+      "needs_action": "no",
+      "urgency": "none"
+    }
+  },
+  {
+    "name": "consumer monthly energy report",
+    "state": "From: Smart Thermostat <news@service.test>\nSubject: Your monthly energy report\nBody: See your monthly savings and tips.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "potential_spam",
+      "needs_action": "no",
+      "urgency": "none"
+    }
+  },
+  {
+    "name": "club weekly roundup",
+    "state": "From: Local Club <news@club.test>\nSubject: Friday club update\nBody: General announcements and a broad roundup for all members.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "potential_spam",
+      "needs_action": "no",
+      "urgency": "none"
+    }
+  },
+  {
+    "name": "prayer request subscription feed",
+    "state": "From: Prayer Feed <notifications@prayer.test>\nSubject: New prayer request\nBody: A new prayer request from a subscribed missionary feed.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "potential_spam",
+      "needs_action": "no",
+      "urgency": "none"
+    }
+  },
+  {
+    "name": "home valuation report",
+    "state": "From: Home Search <listings@homes.test>\nSubject: Your monthly home report is ready\nBody: See an automated estimate of your home value.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "potential_spam",
+      "needs_action": "no",
+      "urgency": "none"
+    }
+  },
+  {
+    "name": "terms update always potential spam",
+    "state": "From: Service <legal@service.test>\nSubject: Updates to our Terms and Privacy Policy\nBody: We updated our terms and privacy policy.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "potential_spam",
+      "needs_action": "no",
+      "urgency": "none"
+    }
+  },
+  {
+    "name": "app analytics summary",
+    "state": "From: App Store Connect <noreply@apple.test>\nSubject: App Analytics Weekly Summary\nBody: Weekly impressions, units, sessions, proceeds, and crashes.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "potential_spam",
+      "needs_action": "no",
+      "urgency": "none"
+    }
+  },
+  {
+    "name": "linkedin invitation is potential spam",
+    "state": "From: Person <invitations@linkedin.test>\nSubject: I want to connect\nBody: A professional network invitation is waiting for your response.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "potential_spam",
+      "needs_action": "no",
+      "urgency": "none"
+    }
   }
 ]
