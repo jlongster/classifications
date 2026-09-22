@@ -468,5 +468,15 @@
       "needs_action": "no",
       "urgency": "none"
     }
+  },
+  {
+    "name": "apple developer events roundup",
+    "state": "From: Apple Developer <developer@insideapple.example>\nTo: Recipient <me@example.test>\nSubject: Upcoming events: Get ready to launch\nBody: Join developer workshops, livestreams, conferences, and group labs around the world and online.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "potential_spam",
+      "needs_action": "no",
+      "urgency": "none"
+    }
   }
 ]

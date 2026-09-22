@@ -72,7 +72,8 @@
       "Disney+ engagement nudges",
       "Reddit digests",
       "Facebook shared-post notifications",
-      "The Neuron"
+      "The Neuron",
+      "Apple Developer event, workshop, conference, and promotional roundups; specific account, app-review, or operational notices may be Work"
     ]
   },
   "hard_category_example_policy": "Apply these examples deterministically before category-confidence review. A matching hard example overrides Jev category probabilities and does not receive Review. Match by message type, not sender alone, when an example includes a subtype distinction."
