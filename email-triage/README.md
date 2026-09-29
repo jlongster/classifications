@@ -9,7 +9,7 @@ Classifies email by direct-to-recipient status, category, action requirement, an
 - Base direct-to-you, action, and urgency on the latest unanswered inbound message; apply one consistent classification to the thread.
 - Enforce that mail written directly to the recipient is always **Personal** or **Work**; automated mail may use any category.
 - Use **Email Lists** only when List-ID or a known list address proves it is a real discussion list; social-network digests are not lists. For Email Lists, deterministically extract an entity and create a nested label such as `Email Lists/gambit`. Email Lists always skip Inbox and never receive urgency. Never classify `equity-confidential@stripe.com` as Email Lists; it is always Personal, with action and urgency determined normally from the message. All newsletters use the single top-level `Newsletters` label; never create newsletter sublabels.
-- Keep **Personal** mail in Inbox only when it has neither `Action` nor `Urgency/high`. Any message with `Action` or `Urgency/high` skips Inbox. Archive all other categories under their labels.
+- Keep **Personal** mail in Inbox only when it has neither `Action` nor `Urgency/high`, except deterministic quiet-Personal routing examples. Any message with `Action` or `Urgency/high` skips Inbox. A quiet-Personal routing match also skips Inbox and is marked read while remaining categorized as Personal. Archive all other categories under their labels.
 - Add `Action` only when the category is **Personal** or **Work** and action is required. Never apply it to another category.
 - Add `Urgency/high` only when someone is blocked, immediate intervention is needed, or a real deadline/security risk is within 24 hours. Add `Urgency/low` when legitimate attention is needed within several days. Otherwise apply no urgency label. GitHub, Email Lists, Spam, and Potential Spam never receive urgency; ignore Jev’s urgency result for those categories.
 - Use **Newsletters** only for recurring author-led letters or essays clearly written by an identifiable person in a personal, conversational voice. Company-branded publications and corporate editorial content are **Potential Spam**. An individual sender or Substack address alone does not qualify: unsolicited product launches, vendor announcements, branded pitches, and promotional posts are Potential Spam.
@@ -35,8 +35,12 @@ Synthetic fixtures are in `tests.json`.
 
 These are deterministic category overrides applied before confidence review. A match does not go to Review. When an entry names a message subtype, match the subtype rather than the sender alone.
 
-- Personal: Guardian claims/coverage/billing/plan actions; dental reminders; requested estimates; concrete credit/account changes; WEPC family updates; every message from `equity-confidential@stripe.com` (action and urgency remain content-dependent).
+- Personal: Guardian claims/coverage/billing/plan actions; dental reminders; requested estimates; concrete credit/account changes; WEPC family updates; every message from `equity-confidential@stripe.com` (action and urgency remain content-dependent); legitimate routine “Thanks for submitting your payment” and “Thank you for your payment” confirmations.
 - Work: npm publish confirmations; Cloudflare operational account changes.
 - Newsletters: JavaScript Weekly; Jonny May; Caleb Long authored updates.
 - Email Lists: “Linking side modules and a main module.”
 - Potential Spam: Guardian EAP promotions; ecobee reports; ACAC broad roundups; Prayvine feeds; Redfin reports; all terms/privacy updates; App Store analytics; every LinkedIn invitation; Jostens offers; Disney+ nudges; Reddit/Facebook digests; The Neuron.
+
+## Hard routing examples
+
+Apply `hard_routing_examples` after category classification and before ordinary Inbox routing. Routine successful post-payment acknowledgments remain **Personal** but skip Inbox and are marked read. Do not apply this override to payment failures, disputes, refunds, reversals, service-interruption warnings, or messages requiring follow-up.

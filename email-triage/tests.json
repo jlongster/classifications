@@ -508,5 +508,33 @@
       "needs_action": "no",
       "urgency": "none"
     }
+  },
+  {
+    "name": "routine payment submission confirmation is quiet personal",
+    "state": "From: Verizon Notification <verizon-notification@example.test>\nTo: Recipient <me@example.test>\nSubject: Thanks for submitting your payment\nBody: Thanks for your recent payment. It was successfully submitted and will be applied to your account. No action is required.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "personal",
+      "needs_action": "no",
+      "urgency": "none"
+    },
+    "expected_routing": {
+      "inbox": "skip",
+      "read": "mark_read"
+    }
+  },
+  {
+    "name": "payment failure is not quiet personal",
+    "state": "From: Billing <billing@example.test>\nTo: Recipient <me@example.test>\nSubject: Your payment failed\nBody: We could not process your payment. Update your payment method by tomorrow to avoid service interruption.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "personal",
+      "needs_action": "yes",
+      "urgency": "high"
+    },
+    "expected_routing": {
+      "inbox": "skip",
+      "read": "preserve"
+    }
   }
 ]
