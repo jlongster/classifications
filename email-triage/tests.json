@@ -536,5 +536,19 @@
       "inbox": "skip",
       "read": "preserve"
     }
+  },
+  {
+    "name": "facebook shared post notification never reaches inbox",
+    "state": "From: Joel on Facebook <friendupdates@facebookmail.com>\nTo: Recipient <me@example.test>\nSubject: Joel shared Rinse & Reset’s post\nBody: See the post that he shared. View it on Facebook.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "potential_spam",
+      "needs_action": "no",
+      "urgency": "none"
+    },
+    "expected_routing": {
+      "inbox": "skip",
+      "read": "mark_read"
+    }
   }
 ]

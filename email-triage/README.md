@@ -39,8 +39,8 @@ These are deterministic category overrides applied before confidence review. A m
 - Work: npm publish confirmations; Cloudflare operational account changes.
 - Newsletters: JavaScript Weekly; Jonny May; Caleb Long authored updates.
 - Email Lists: “Linking side modules and a main module.”
-- Potential Spam: Guardian EAP promotions; ecobee reports; ACAC broad roundups; Prayvine feeds; Redfin reports; all terms/privacy updates; App Store analytics; every LinkedIn invitation; Jostens offers; Disney+ nudges; Reddit/Facebook digests; The Neuron.
+- Potential Spam: Guardian EAP promotions; ecobee reports; ACAC broad roundups; Prayvine feeds; Redfin reports; all terms/privacy updates; App Store analytics; every LinkedIn invitation; Jostens offers; Disney+ nudges; Reddit/Facebook digests; every Facebook notification that someone shared a post, link, photo, video, reel, or memory; The Neuron.
 
 ## Hard routing examples
 
-Apply `hard_routing_examples` after category classification and before ordinary Inbox routing. Routine successful post-payment acknowledgments remain **Personal** but skip Inbox and are marked read. Do not apply this override to payment failures, disputes, refunds, reversals, service-interruption warnings, or messages requiring follow-up.
+Apply `hard_routing_examples` after category classification and before ordinary Inbox routing. `always_skip_inbox_mark_read` examples skip Inbox and are marked read regardless of model routing; this includes all Facebook share notifications. Routine successful post-payment acknowledgments remain **Personal** but skip Inbox and are marked read. Do not apply this override to payment failures, disputes, refunds, reversals, service-interruption warnings, or messages requiring follow-up.
