@@ -488,5 +488,25 @@
       "needs_action": "no",
       "urgency": "none"
     }
+  },
+  {
+    "name": "stripe equity confidential deadline can be urgent and actionable despite list headers",
+    "state": "Current message:\nFrom: Global Equity Management <equity-confidential@stripe.com>\nTo: James <me@example.test>\nSubject: Action required in 15 minutes: option exercise expires\nReceived: October 21 at 11:45 AM\nList-ID: stripe-equity.example.test\nBody: James, your vested option exercise expires irreversibly at noon today. Submit the required election in the next 15 minutes or the options will be forfeited.",
+    "expected": {
+      "direct_to_you": "yes",
+      "category": "personal",
+      "needs_action": "yes",
+      "urgency": "high"
+    }
+  },
+  {
+    "name": "stripe equity confidential informational update remains personal without forced urgency",
+    "state": "From: Global Equity Management <equity-confidential@stripe.com>\nTo: undisclosed-recipients:;\nSubject: Stripe tender update\nList-ID: stripe-equity.example.test\nBody: This is an informational update for Stripe shareholders. No action is required at this time.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "personal",
+      "needs_action": "no",
+      "urgency": "none"
+    }
   }
 ]
