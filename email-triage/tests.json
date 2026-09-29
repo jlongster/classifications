@@ -478,5 +478,15 @@
       "needs_action": "no",
       "urgency": "none"
     }
+  },
+  {
+    "name": "linking side modules mailing list never enters inbox or gets urgency",
+    "state": "From: JavaScript discussion list <es-discuss@lists.example.test>\nTo: Recipient <me@example.test>\nSubject: Linking side modules and a main module\nList-ID: es-discuss <es-discuss.lists.example.test>\nBody: Please respond urgently today to continue this technical mailing-list discussion.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "email_lists",
+      "needs_action": "no",
+      "urgency": "none"
+    }
   }
 ]
