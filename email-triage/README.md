@@ -39,7 +39,7 @@ These are deterministic category overrides applied before confidence review. A m
 - Work: npm publish confirmations; Cloudflare operational account changes.
 - Newsletters: JavaScript Weekly; Jonny May; Caleb Long authored updates.
 - Email Lists: “Linking side modules and a main module.”
-- Potential Spam: Guardian EAP promotions; ecobee reports; ACAC broad roundups; Prayvine feeds; Redfin reports; all terms/privacy updates; App Store analytics; every LinkedIn invitation; Jostens offers; Disney+ nudges; Reddit/Facebook digests; every Facebook notification that someone shared a post, link, photo, video, reel, or memory; The Neuron.
+- Potential Spam: every message from Nextdoor or a Nextdoor-owned email domain, regardless of subject or apparent urgency; Guardian EAP promotions; ecobee reports; ACAC broad roundups; Prayvine feeds; Redfin reports; all terms/privacy updates; App Store analytics; every LinkedIn invitation; Jostens offers; Disney+ nudges; Reddit/Facebook digests; every Facebook notification that someone shared a post, link, photo, video, reel, or memory; The Neuron.
 
 ## Hard routing examples
 

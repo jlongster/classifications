@@ -550,5 +550,17 @@
       "inbox": "skip",
       "read": "mark_read"
     }
+  },
+  {
+    "name": "nextdoor security-sounding post is still potential spam",
+    "state": "From: Trending on Nextdoor <no-reply@rs.email.nextdoor.com>\nTo: Recipient <me@example.test>\nSubject: Credit card scam alert\nBody: A neighbor warns about a bank scam and asks everyone to read the details immediately.",
+    "expected": {
+      "direct_to_you": "no",
+      "category": "potential_spam",
+      "needs_action": "no",
+      "urgency": "none",
+      "inbox": "skip",
+      "read": "mark_read"
+    }
   }
 ]
