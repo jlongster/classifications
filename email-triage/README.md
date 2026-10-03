@@ -35,7 +35,7 @@ Synthetic fixtures are in `tests.json`.
 
 These are deterministic category overrides applied before confidence review. A match does not go to Review. When an entry names a message subtype, match the subtype rather than the sender alone.
 
-- Personal: Guardian claims/coverage/billing/plan actions; dental reminders; requested estimates; concrete credit/account changes; WEPC family updates; every message from `equity-confidential@stripe.com` (action and urgency remain content-dependent); legitimate routine “Thanks for submitting your payment” and “Thank you for your payment” confirmations.
+- Personal: personal estate-planning and household legal-services correspondence; Guardian claims/coverage/billing/plan actions; dental reminders; requested estimates; concrete credit/account changes; WEPC family updates; every message from `equity-confidential@stripe.com` (action and urgency remain content-dependent); legitimate routine “Thanks for submitting your payment” and “Thank you for your payment” confirmations.
 - Work: npm publish confirmations; Cloudflare operational account changes.
 - Newsletters: JavaScript Weekly; Jonny May; Caleb Long authored updates.
 - Email Lists: “Linking side modules and a main module.”

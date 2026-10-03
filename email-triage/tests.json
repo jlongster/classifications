@@ -562,5 +562,17 @@
       "inbox": "skip",
       "read": "mark_read"
     }
+  },
+  {
+    "name": "personal estate planning request is not review",
+    "state": "From: Estate Planning Coordinator <coordinator@lawfirm.example>\nTo: Recipient <me@example.test>, Spouse <spouse@example.test>\nSubject: Estate Planning\nBody: Thank you for engaging us for your family estate plan. Please sign the representation agreement and return your completed trust questionnaire and property deed by October 15.",
+    "expected": {
+      "direct_to_you": "yes",
+      "category": "personal",
+      "needs_action": "yes",
+      "urgency": "low",
+      "inbox": "skip",
+      "read": "preserve_unread"
+    }
   }
 ]
